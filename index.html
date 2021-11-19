@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Financial Planner : PVera</title>
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+  }
+
+  code {
+    font-size: larger;
+    color: black;
+  }
+  body {
+    padding: 1em;
+    font-size: large;
+    color: rgb(64, 175, 79);
+    background-color: cornsilk;
+  }
+  h1{
+    text-align: center;
+    width: 100%;
+    margin: 50px auto 50px auto;
+  }
+
+</style>
+
+</head>
+<body>
+<h1>Vera's Financial Planner Story</h1>
+
+# create a new input that takes an float (decimal number)<br/>
+<code>grossIncome = float(input("Enter your gross income: "))</code> 
+<br/>
+<br/>
+
+# change the gross income to the net income using .0625<br/>
+<code>netIncome = grossIncome - (grossIncome * .0625)</code> 
+
+<br/>
+<br/>
+# we need to ask for the users bills, but we also need to ask over and over again until the user terminates the loop using a -1<br/>
+# this is just one way we can do this - this example below is using a While Loop Function<br/>
+# this input is for your user to enter and start the bills loop function
+bills = float(input("Please enter your first bill: "))
+<br/>
+<br/>
+# we can use the sum variable to add our bills. This is stating that our sum variable will start at zero.
+<br/>
+<code>sum = 0</code>
+<br/>
+# we can use the count variable to add the number of input entries our user makes. This is stating that our count variable will start at zero.
+<br/>
+<code>count = 0</code> 
+<br/>
+# while Loop Function Start - Everything in thing function will run in a loop until -1 is used to terminate the loop
+<br/>
+<code>
+  while (bills != -1) :
+</code><br/>
+  # we need to add the bills together<br/>
+  <code>
+    sum += bills
+  </code> <br/>
+  # we need to count the number of inputs the user is entering<br/>
+  <code>
+    count += 1
+  </code> <br/>
+  # we need the loop to prompt our user to enter another bill - we can copy/paste the whole bill variable line.<br/>
+  <code>
+    bills = float(input("Please enter a bill: "))
+  </code> 
+<br/>
+<br/>
+# we need to print out all of our data in a presentable way so the user may view all information<br/># last lines need to subtract the total bills from our netIncome and print the leftOverIncome<br/><br/>
+<code><br/>
+  print("Gross Income: " + str(grossIncome))<br/>
+  print("Net Income: " + str(netIncome))<br/>
+  print("Bills Total: " + str(sum))<br/>
+  print("Number of Bills Entered: " + str(count))
+  <br/><br/>
+  leftOverIncome = netIncome - sum<br/>
+  print("Your Usable Monthly Amount: " + str(leftOverIncome))
+</code> 
+</body>
+</html>
