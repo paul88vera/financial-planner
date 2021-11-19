@@ -4,6 +4,8 @@
 I created this Python financial planner to show a real-world use of loop functions to secondary students.
 
 ## Built With
+* HTML
+* CSS
 * Python
 
 ## Contribution
